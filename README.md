@@ -11,5 +11,3 @@ O NoteApp foi desenvolvido com as seguintes tecnologias:<br><Hong>Frontend: Html
 <h3>6. Fazer o migrate das migrações criadas, para que de facto sejam criadas tabelas para o aplicativo, comando: python manage.py migrate note</h3>
 <h3>7. Fazer o migrate das outras aplicações que por padrão com o Django, comando: python manage.py migrate</h3>
 <h3>5. Rodar o projecto com o comando: python manage.py runserver</h3>
-
-<h4>Se houver qualquer sugestão de melhoria, por favor sinta-se livre de fazer um pull request.</h4>
