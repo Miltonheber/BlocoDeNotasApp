@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    {% if status == '0' %}
+        <div class="alert alert-danger">Entrada Invalida!</div>
+    {% endif %}
+    {% if status == '1' %}
+        <div class="alert alert-success">Task Added!</div>
+    {% endif %}
+    {% if status == '2' %}
+        <div class="alert alert-success">Task Updated!</div>
+    {% endif %}
+
+    <main class="box-homecreate-template">
+        <form class="formulario" method="post">
+            {% csrf_token %}
+            <input  name="body" class="form-control" type="text" placeholder="Add your task here..." aria-label="readonly input example">
+            <button type="submit" class="btn btn-success">Add</button>
+        </form>
+        <button href= "{% url 'listall' %}" class="btn btn-primary"> Ver Notas</button>
+</main>
+{% endblock %}

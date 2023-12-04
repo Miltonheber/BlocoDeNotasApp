@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}List{% endblock %}
+
+{% block content %}
+  <div class="list-box">
+    {% if notas %}
+      <div class="list-box1">
+        {% for nota in notas %}
+          <div class="card container">{{nota.body}}</div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="alert alert-info">Nao ha notas disponiveis! :(</div>
+    {% endif %}
+  </div>
+{% endblock %}
