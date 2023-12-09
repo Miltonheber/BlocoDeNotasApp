@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, get_list_or_404
 from .models import Note
 
 
-def homeCreate(request):
+def homecreate(request):
     
     context = {
         'status':request.GET.get('status'),
@@ -26,7 +26,7 @@ def delete(request, id):
     nota.delete()
     
 
-def updateNote(request, id):
+def updatenote(request, id):
     nota = get_object_or_404(Note, id=id)
     contexto = {
         'nota':nota,
@@ -41,13 +41,8 @@ def updateNote(request, id):
     
     return render(request, 'update.html', contexto)
 
-def listAll(request):
-    try:
-        notas = Note.objects.all()
-        contexto = {
-        'notas':notas,
-            }
-        return render(request, 'listall.html',contexto)
-    except:
-        print('ocorreu um erro')
+def listall(request):
+    notas = get_list_or_404(Note)
+    contexto = {'notas':notas}
+    return render(request, 'listall.html',contexto)
 
