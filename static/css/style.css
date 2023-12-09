@@ -29,7 +29,11 @@ body {
 .simbolos {
     display: flex;
     justify-content: space-around;
+    column-gap: 5px;
 
+}
+#botaolist-icon{
+    color:black;
 }
 .formulario {
     display: flex;
